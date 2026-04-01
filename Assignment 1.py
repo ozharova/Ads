@@ -6,6 +6,8 @@ def from_one_to_n(n):
     print(n, end=" ")
 n = int(input())
 from_one_to_n(n)
+# T O(n)
+# S O(n)
 
 #Task 2
 def from_n_to_one(n):
@@ -14,6 +16,8 @@ def from_n_to_one(n):
     print(n, end=" ")
     from_n_to_one(n - 1)
 from_n_to_one(n)
+# T O(n)
+# S O(n)
 
 #Task 3
 def sum(n):
@@ -22,6 +26,8 @@ def sum(n):
     return n + sum(n - 1)
 n = int(input())
 print(sum(n))
+# T O(n)
+# S O(n)
 
 #Task 4
 def fact(n):
@@ -30,6 +36,8 @@ def fact(n):
     return n * fact(n - 1)
 n = int(input())
 print(fact(n))
+# T O(n)
+# S O(n)
 
 #Task 5
 def power(a, b):
@@ -39,6 +47,8 @@ def power(a, b):
 a = int(input())
 b = int(input())
 print(power(a, b))
+# T O(b)
+# S O(b)
 
 #Task 6
 def sum_of_digets(n):
@@ -50,6 +60,8 @@ def sum_of_digets(n):
     return last + sum_of_digets(n // 10)
 n = int(input())
 print(sum_of_digets(n))
+# T O(k); k = кол-во цифр в числе
+# S O(k)
 
 #Task 7
 def count(n):
@@ -60,6 +72,8 @@ def count(n):
         return a + count(n // 10)
 n = int(input())
 print(count(n))
+# T O(k); k = кол-во цифр в числе
+# S O(k)
 
 #Task 8
 def reverse(n):
@@ -70,6 +84,8 @@ def reverse(n):
     return reverse(n // 10)
 n = int(input())
 reverse(n)
+# T O(k); k = кол-во цифр в числе
+# S O(k)
 
 #Task 9
 def fib(n):
@@ -80,6 +96,9 @@ def fib(n):
     return fib(n - 1) + fib(n - 2)
 n = int(input())
 print(fib(n))
+# T O(2^n)
+# S O(n)
+
 #Task 10
 def  palindrome(s):
     if len(s) <= 1:
@@ -89,6 +108,8 @@ def  palindrome(s):
     return palindrome(s[1:-1])
 s = str(input())
 palindrome(s)
+# T O(n^2)
+# S O(n^2)
 
 #Task 11
 def sum_array(arr):
@@ -98,6 +119,8 @@ def sum_array(arr):
         return arr[0] + sum_array(arr[1:])
 arr = list(map(int, input().split()))
 print(sum_array(arr))
+# T O(n^2)
+# S O(n^2)
 
 #Task 12
 def max_array(arr):
@@ -110,6 +133,8 @@ def max_array(arr):
         return max_
 arr = list(map(int, input().split()))
 print(max_array(arr))
+# T O(n^2)
+# S O(n^2)
 
 #Task 13
 def count_target(arr, target):
@@ -123,6 +148,8 @@ def count_target(arr, target):
 arr = list(map(int, input().split()))
 target = int(input())
 print(count_target(arr, target))
+# T O(n^2)
+# S O(n^2)
 
 #Task 14
 def find_target(arr, target):
@@ -135,6 +162,8 @@ def find_target(arr, target):
 arr = list(map(int, input().split()))
 target = int(input())
 find_target(arr, target)
+# T O(n^2)
+# S O(n^2)
 
 #Task 15
 def is_sorted(arr):
@@ -150,6 +179,8 @@ if is_sorted(arr) == True:
     print("Sorted")
 else:
     print("Not sorted")
+# T O(n^2)
+# S O(n^2)
 
 #Task 16
 def find_target(arr, target, start, end):
@@ -164,3 +195,5 @@ arr = list(map(int, input().split()))
 target = int(input())
 result = find_target(arr,target, 0, len(arr) - 1)
 print(f"Element found at index {result}")
+# T O(log n)
+# S O(log n)
